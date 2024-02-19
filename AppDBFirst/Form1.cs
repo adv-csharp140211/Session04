@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppDBFirst.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,18 @@ namespace AppDBFirst
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            //
+            Redresh();
+        }
+
+        private void Redresh()
+        {
+            var userService = new UserSerice();
+            dataGridView1.DataSource = userService.GetAll();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Redresh();
         }
     }
 }
