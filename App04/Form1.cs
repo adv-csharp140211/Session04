@@ -1,4 +1,4 @@
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Sesion02.Utils;
 
 namespace App04
 {
@@ -13,6 +13,12 @@ namespace App04
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var date = DateTime.Now;
+            date.ToJalali();
+
+            DateUtil.MiladiToJalai(date);
+            DateUtil.ToJalali(date);
+
 
         }
 
