@@ -1,1 +1,8 @@
-﻿
+﻿EF Code First
+	1. install package dotnet-ef
+		dotnet tool install --global dotnet-ef
+		dotnet tool update  --global dotnet-ef
+
+	2. nuget package
+		* Microsoft.EntityFrameworkCore.SqlServer
+		Microsoft.EntityFrameworkCore.Design
