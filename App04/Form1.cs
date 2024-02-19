@@ -42,10 +42,28 @@ namespace App04
             //lambda express
             //lazy
 
-            var result = Xyz(n => n % 2 == 0);
+          
+            var result1 = Where(n => n % 2 == 0);
+            var result2 = numbers.Where(n => n % 2 == 0); // filter
+            var result3 = numbers.Select(n => n % 2 == 0);
 
+
+            //Linq 
+            // 1. query
+            // 2. lambda
+
+            //linq -> query
+            var result4 = from n in numbers
+                          where n % 2 == 0
+                          select n;
+
+
+            var result5 = numbers
+                .Where(n => n % 2 == 0)
+                .Select( x => x*10);
+             
             listBox1.Items.Clear();
-            listBox1.Items.AddRange(result.Cast<object>().ToArray());
+            listBox1.Items.AddRange(result5.Cast<object>().ToArray());
 
         }
 
@@ -66,7 +84,7 @@ namespace App04
             //{
             //    listBox1.Items.Add(number.ToString());
             //}
-            var result = Xyz(x => x % 2 != 0);
+            var result = Where(x => x % 2 != 0);
 
             listBox1.Items.Clear();
             listBox1.Items.AddRange(result.Cast<object>().ToArray());
@@ -91,21 +109,21 @@ namespace App04
             //}
 
 
-            Xyz((int x) => {
+            Where((int x) => {
                 //
                 return x > 5;
             });
-            Xyz((int x) => x > 5);
-            Xyz(x => x > 5);
+            Where((int x) => x > 5);
+            Where(x => x > 5);
 
-            var result = Xyz(x => x > 5);
+            var result = Where(x => x > 5);
 
             listBox1.Items.Clear();
             listBox1.Items.AddRange(result.Cast<object>().ToArray());
         }
 
 
-        private List<int> Xyz(Func<int, bool> shart)
+        private List<int> Where(Func<int, bool> shart)
         {
             var result = new List<int>();
             for (int i = 0; i < numbers.Count; i++)
@@ -120,6 +138,18 @@ namespace App04
             return result;           
         }
 
-        
+        private List<bool> Select(Func<int, bool> p) //map
+        {
+            var result = new List<bool>();
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                var number = numbers[i];
+                result.Add(p(number));
+            }
+
+            return result;
+        }
+
+
     }
 }
