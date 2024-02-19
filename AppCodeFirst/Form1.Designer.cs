@@ -42,6 +42,7 @@
             buttonInsertSampleUser.TabIndex = 0;
             buttonInsertSampleUser.Text = "Insert Sample User";
             buttonInsertSampleUser.UseVisualStyleBackColor = true;
+            buttonInsertSampleUser.Click += buttonInsertSampleUser_Click;
             // 
             // dataGridViewUsers
             // 
@@ -59,6 +60,7 @@
             buttonRefresh.TabIndex = 2;
             buttonRefresh.Text = "Refesh";
             buttonRefresh.UseVisualStyleBackColor = true;
+            buttonRefresh.Click += buttonRefresh_Click;
             // 
             // Form1
             // 
