@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            buttonInsertSampleUser = new Button();
+            dataGridViewUsers = new DataGridView();
+            buttonRefresh = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
+            SuspendLayout();
+            // 
+            // buttonInsertSampleUser
+            // 
+            buttonInsertSampleUser.Location = new Point(12, 12);
+            buttonInsertSampleUser.Name = "buttonInsertSampleUser";
+            buttonInsertSampleUser.Size = new Size(186, 23);
+            buttonInsertSampleUser.TabIndex = 0;
+            buttonInsertSampleUser.Text = "Insert Sample User";
+            buttonInsertSampleUser.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewUsers
+            // 
+            dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewUsers.Location = new Point(12, 41);
+            dataGridViewUsers.Name = "dataGridViewUsers";
+            dataGridViewUsers.Size = new Size(776, 397);
+            dataGridViewUsers.TabIndex = 1;
+            // 
+            // buttonRefresh
+            // 
+            buttonRefresh.Location = new Point(713, 12);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new Size(75, 23);
+            buttonRefresh.TabIndex = 2;
+            buttonRefresh.Text = "Refesh";
+            buttonRefresh.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(buttonRefresh);
+            Controls.Add(dataGridViewUsers);
+            Controls.Add(buttonInsertSampleUser);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button buttonInsertSampleUser;
+        private DataGridView dataGridViewUsers;
+        private Button buttonRefresh;
     }
 }
