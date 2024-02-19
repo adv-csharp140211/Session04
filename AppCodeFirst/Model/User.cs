@@ -9,5 +9,5 @@ public class User
     public string UserName { get; set; } = string.Empty;
     public bool IsActive { get; set; }
     public string NationalCode { get; set; }
-    public DateTime Dob { get; set; }
+    public DateTime DateOfBirth { get; set; }
 }

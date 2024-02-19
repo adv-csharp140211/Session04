@@ -20,3 +20,8 @@
 		dotnet ef migrations add <NAME>
 	6. Update Database
 		dotnet ef database update
+
+
+
+dotnet ef migration script
+https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/applying?tabs=dotnet-core-cli
